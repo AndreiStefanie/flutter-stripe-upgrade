@@ -6,7 +6,7 @@ import 'package:stripe_upgrade/locator.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  await setupLocator();
+  await setupLocalLocator();
 
   // Feel free to initialize other packages or services here
   // For example, easy_localization which I highly recommend

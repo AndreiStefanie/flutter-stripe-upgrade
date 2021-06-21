@@ -64,3 +64,9 @@ node_modules/
 
 # dotenv environment variables file
 .env
+
+# firebase emulators data
+emulators-data/
+
+# firebase environment config
+.runtimeconfig.json

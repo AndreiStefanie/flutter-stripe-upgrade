@@ -21,5 +21,7 @@ module.exports = {
   },
   ignorePatterns: ['/lib/**/*'],
   plugins: ['@typescript-eslint', 'import'],
-  rules: {},
+  rules: {
+    'linebreak-style': 'windows',
+  },
 };
