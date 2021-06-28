@@ -32,9 +32,9 @@ class FirebasePaymentsService implements PaymentsService {
     );
 
     return PaymentIntentResult(
-      result.data['status'],
-      result.data['customerId'],
-      result.data['clientSecret'],
+      status: result.data['status'],
+      customerId: result.data['customerId'],
+      clientSecret: result.data['clientSecret'],
     );
   }
 

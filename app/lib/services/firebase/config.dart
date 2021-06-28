@@ -20,10 +20,10 @@ class FirebaseConfigService implements ConfigService {
   @override
   StripeInfo getStripeInfo() {
     return StripeInfo(
-      _remoteConfig.getString('stripe_account_id'),
-      _remoteConfig.getString('stripe_api_key'),
-      _remoteConfig.getString('merchant_id'),
-      _remoteConfig.getString('pay_mode'),
+      accountId: _remoteConfig.getString('stripe_account_id'),
+      apiKey: _remoteConfig.getString('stripe_api_key'),
+      merchantId: _remoteConfig.getString('merchant_id'),
+      payMode: _remoteConfig.getString('pay_mode'),
     );
   }
 }

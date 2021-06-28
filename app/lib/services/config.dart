@@ -4,18 +4,23 @@ abstract class ConfigService {
 }
 
 class StripeInfo {
-  // The Stripe account ID - https://stripe.com/docs/dashboard#find-account-id
+  /// The Stripe account ID - https://stripe.com/docs/dashboard#find-account-id
   final String accountId;
 
-  // The Stripe publishable key - https://stripe.com/docs/keys
+  /// The Stripe publishable key - https://stripe.com/docs/keys
   final String apiKey;
 
-  // The Apple Pay Merchant ID - https://stripe.com/docs/apple-pay
+  /// The Apple Pay Merchant ID - https://stripe.com/docs/apple-pay
   final String merchantId;
 
-  // 'test' or 'prod' - relevant especially for native payment methods (GPay)
-  // which do not provide credit cards for testing
+  /// 'test' or 'prod' - relevant especially for native payment methods (GPay)
+  /// which do not provide credit cards for testing
   final String payMode;
 
-  StripeInfo(this.accountId, this.apiKey, this.merchantId, this.payMode);
+  StripeInfo({
+    required this.accountId,
+    required this.apiKey,
+    required this.merchantId,
+    required this.payMode,
+  });
 }

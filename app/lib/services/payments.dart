@@ -24,5 +24,9 @@ class PaymentIntentResult {
   final String customerId;
   final String clientSecret;
 
-  PaymentIntentResult(this.status, this.customerId, this.clientSecret);
+  PaymentIntentResult({
+    required this.status,
+    required this.customerId,
+    required this.clientSecret,
+  });
 }
