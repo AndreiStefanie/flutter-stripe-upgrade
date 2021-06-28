@@ -1,0 +1,21 @@
+{
+  "app": {
+    "name": "Stripe Upgrade"
+  },
+  "home": {
+    "title": "Home",
+    "addFundsTitle": "Add Funds"
+  },
+  "wallet": {
+    "title": "Wallet",
+    "availableFunds": "Available funds",
+    "topupFunds": "Topup funds",
+    "continueToPaymentMethod": "Select payment method",
+    "onlyNumbers": "Invalid amount",
+    "fundsAdded": "Funds added",
+    "error": "Topup failed",
+    "minimum": "Minimum topup is {}",
+    "from": "From",
+    "to": "To"
+  }
+}

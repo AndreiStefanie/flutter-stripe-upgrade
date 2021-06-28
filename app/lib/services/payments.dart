@@ -20,7 +20,7 @@ abstract class PaymentsService {
 }
 
 class PaymentIntentResult {
-  final String status;
+  String status;
   final String customerId;
   final String clientSecret;
 

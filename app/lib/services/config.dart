@@ -1,6 +1,8 @@
 abstract class ConfigService {
   Future<void> initialize();
   StripeInfo getStripeInfo();
+  int getMinimumTopup(String currency);
+  String getDefaultCurrency();
 }
 
 class StripeInfo {

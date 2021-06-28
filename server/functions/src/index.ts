@@ -78,10 +78,10 @@ export const createPaymentMethod = func().https.onCall(
 export const createPaymentIntent = func().https.onCall(
   async (data, context) => {
     if (!context.auth?.uid) {
-      return {
-        success: false,
-        message: 'Unauthenticated',
-      };
+      throw new functions.https.HttpsError(
+        'failed-precondition',
+        'Authentication required'
+      );
     }
 
     try {
@@ -103,11 +103,7 @@ export const createPaymentIntent = func().https.onCall(
         clientSecret: result.client_secret,
       };
     } catch (error) {
-      console.log(error.message);
-      return {
-        success: false,
-        message: error.message,
-      };
+      throw new functions.https.HttpsError('unknown', error.message);
     }
   }
 );
